@@ -111,7 +111,7 @@ namespace _24_3J_almacen_pedro
                 registro.Codigo = oDoc.GetCellValueAsInt32(renglon, 1);
                 registro.Producto = oDoc.GetCellValueAsString(renglon, 2);
                 registro.Descripcion = oDoc.GetCellValueAsString(renglon, 3);
-                registro.StockInicial = (float) oDoc.GetCellValueAsDouble(renglon, 4);
+                registro.StockInicial = Convert.ToSingle( oDoc.GetCellValueAsDouble(renglon, 4) );
                 registro.Entradas = (float) oDoc.GetCellValueAsDouble(renglon, 5);
                 registro.Salidas = (float) oDoc.GetCellValueAsDouble(renglon, 6);
                 registro.Total = (float) oDoc.GetCellValueAsDouble(renglon, 7);
