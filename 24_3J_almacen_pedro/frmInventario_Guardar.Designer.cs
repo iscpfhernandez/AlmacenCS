@@ -227,6 +227,7 @@
             Margin = new Padding(6, 7, 6, 7);
             Name = "frmInventario_Guardar";
             Text = "Form1";
+            FormClosed += frmInventario_Guardar_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

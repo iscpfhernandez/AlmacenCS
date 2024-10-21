@@ -11,6 +11,17 @@ namespace _24_3J_almacen_pedro
 {
     public partial class frmInventario_Guardar : Form
     {
+        private static frmInventario_Guardar? _instancia;
+
+        public static frmInventario_Guardar GetInstance()
+        {
+            if (_instancia == null)
+            {
+                _instancia = new frmInventario_Guardar();
+            }
+            return _instancia;
+        }
+
         public frmInventario_Guardar()
         {
             InitializeComponent();
@@ -103,9 +114,9 @@ namespace _24_3J_almacen_pedro
 
         }
 
-
-
-
-
+        private void frmInventario_Guardar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _instancia = null;
+        }
     }
 }
